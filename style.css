@@ -1,0 +1,31 @@
+/* ----------------------- CSS RESET ----------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    /*Hides any scrollbars*/
+    overflow: hidden;
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+/* ----------------------- CANVAS ----------------------- */
+
+/*! Note: height and width set through js file */
+canvas {
+    /* background-color: #1C211F; */
+    background-color: transparent;
+}
