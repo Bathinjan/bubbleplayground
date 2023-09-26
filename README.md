@@ -1,6 +1,10 @@
 # Bubble Playground
 Bubbles with a randomized pastel RGB color that bounce around the screen
 
+The bubbles will react to mouseover by increasing in size and alpha
+
+Background is transparent; will show as white on a webpage
+
 ## Add as an OBS Browser Source:
  - Click "+" icon in sources window
  - Select "Browser"
@@ -17,9 +21,10 @@ Yay! Bubbles!!
 Works best on a darker background; generated colors are pastel
 
 ## Upcoming Features
+ - Dark / Light mode: for viewing on a browser
  - Custom Palettes: ability to input custom colors for bubbles
  - Randomization options: bubble velocity, color alphas, array size, etc
  - Non-intrusive customization window for implementing the above
 
 ## Suggestions?
-Feel free to [tweet me](https://twitter.com/bathinjan_) or [email me](mailto:bathinjan@gmail.com) if you want to suggest a feature!
+Feel free to [tweet me](https://twitter.com/bathinjan_) or [email me](mailto:bathinjan@gmail.com) if you want to suggest a feature not listed above!
