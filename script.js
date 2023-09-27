@@ -91,7 +91,23 @@ window.addEventListener("mousemove", function (e) {
   mouse.y = e.clientY;
 
   // Debug
-  console.log(`x: ${mouse.x}\ny:${mouse.y}`);
+  // console.log(`x: ${mouse.x}\ny:${mouse.y}`);
+});
+
+//! Note: functionality for mobile Safari users (same as mousemove)
+// Event listener for click (for Safari mobile users)
+window.addEventListener("click", function (e) {
+  // e.clientX -> mouse position X
+  mouse.x = e.clientX;
+  // e.clientY -> mouse position Y
+  mouse.y = e.clientY;
+});
+
+window.addEventListener("touchstart", function (e) {
+  // e.clientX -> mouse position X
+  mouse.x = e.clientX;
+  // e.clientY -> mouse position Y
+  mouse.y = e.clientY;
 });
 
 //* --------------------------------- RESIZING WINDOW ---------------------------------
