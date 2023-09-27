@@ -96,7 +96,16 @@ window.addEventListener("mousemove", function (e) {
 
 //! Note: functionality for mobile Safari users (same as mousemove)
 // Event listener for click (for Safari mobile users)
-window.addEventListener("click", function (e) {
+window.addEventListener("touchstart", function (e) {
+  // e.clientX -> mouse position X
+  mouse.x = e.clientX;
+  // e.clientY -> mouse position Y
+  mouse.y = e.clientY;
+  e.stopPropagation();
+  e.preventDefault();
+});
+
+window.addEventListener("touchend", function (e) {
   // e.clientX -> mouse position X
   mouse.x = e.clientX;
   // e.clientY -> mouse position Y
@@ -106,11 +115,12 @@ window.addEventListener("click", function (e) {
   e.preventDefault();
 });
 
-window.addEventListener("touchstart", function (e) {
+window.addEventListener("click", function (e) {
   // e.clientX -> mouse position X
   mouse.x = e.clientX;
   // e.clientY -> mouse position Y
   mouse.y = e.clientY;
+  // mobile fixes
   e.stopPropagation();
   e.preventDefault();
 });
