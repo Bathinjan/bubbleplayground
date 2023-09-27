@@ -96,33 +96,53 @@ window.addEventListener("mousemove", function (e) {
 
 //! Note: functionality for mobile Safari users (same as mousemove)
 // Event listener for click (for Safari mobile users)
+// window.addEventListener("touchstart", function (e) {
+//   // e.clientX -> mouse position X
+//   mouse.x = e.clientX;
+//   // e.clientY -> mouse position Y
+//   mouse.y = e.clientY;
+//   e.stopPropagation();
+//   e.preventDefault();
+// });
+
+// window.addEventListener("touchend", function (e) {
+//   // e.clientX -> mouse position X
+//   mouse.x = e.clientX;
+//   // e.clientY -> mouse position Y
+//   mouse.y = e.clientY;
+//   // mobile fixes
+//   e.stopPropagation();
+//   e.preventDefault();
+// });
+
+// window.addEventListener("click", function (e) {
+//   // e.clientX -> mouse position X
+//   mouse.x = e.clientX;
+//   // e.clientY -> mouse position Y
+//   mouse.y = e.clientY;
+//   // mobile fixes
+//   e.stopPropagation();
+//   e.preventDefault();
+// });
+
+// Implementation for ios Safari
 window.addEventListener("touchstart", function (e) {
+  console.log(e);
   // e.clientX -> mouse position X
-  mouse.x = e.clientX;
+  mouse.x = e.touches[0].clientX;
   // e.clientY -> mouse position Y
-  mouse.y = e.clientY;
-  e.stopPropagation();
-  e.preventDefault();
+  mouse.y = e.touches[0].clientY;
 });
 
-window.addEventListener("touchend", function (e) {
+window.addEventListener("mouseover", function (e) {
   // e.clientX -> mouse position X
   mouse.x = e.clientX;
   // e.clientY -> mouse position Y
   mouse.y = e.clientY;
-  // mobile fixes
-  e.stopPropagation();
-  e.preventDefault();
 });
 
-window.addEventListener("click", function (e) {
-  // e.clientX -> mouse position X
-  mouse.x = e.clientX;
-  // e.clientY -> mouse position Y
-  mouse.y = e.clientY;
-  // mobile fixes
-  e.stopPropagation();
-  e.preventDefault();
+window.addEventListener("onclick", function (e) {
+  // Does nothing
 });
 
 //* --------------------------------- RESIZING WINDOW ---------------------------------
