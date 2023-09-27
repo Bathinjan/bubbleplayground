@@ -101,6 +101,9 @@ window.addEventListener("click", function (e) {
   mouse.x = e.clientX;
   // e.clientY -> mouse position Y
   mouse.y = e.clientY;
+  // mobile fixes
+  e.stopPropagation();
+  e.preventDefault();
 });
 
 window.addEventListener("touchstart", function (e) {
@@ -108,6 +111,8 @@ window.addEventListener("touchstart", function (e) {
   mouse.x = e.clientX;
   // e.clientY -> mouse position Y
   mouse.y = e.clientY;
+  e.stopPropagation();
+  e.preventDefault();
 });
 
 //* --------------------------------- RESIZING WINDOW ---------------------------------
