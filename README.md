@@ -22,8 +22,6 @@ Background is transparent; will show as white on a webpage
 Yay! Bubbles!!
 
 ## Note
-Touch events currently don't work in Safari on iOS: working on a fix
-
 Works best on a darker background; generated colors are pastel
 
 ## Upcoming Features
