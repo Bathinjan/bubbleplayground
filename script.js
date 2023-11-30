@@ -75,7 +75,7 @@ let min_radius = 2;
 
 //? ----------------------------------------- EVENT LISTENERS -----------------------------------------
 
-//! Note: will not work as an OBS overlay
+//! Note: will not work on OBS overlay
 //* --------------------------------- MOUSE MOVEMENT ---------------------------------
 // Store mouse event details in object
 let mouse = {
@@ -95,35 +95,7 @@ window.addEventListener("mousemove", function (e) {
 });
 
 //! Note: functionality for mobile Safari users (same as mousemove)
-// Event listener for click (for Safari mobile users)
-// window.addEventListener("touchstart", function (e) {
-//   // e.clientX -> mouse position X
-//   mouse.x = e.clientX;
-//   // e.clientY -> mouse position Y
-//   mouse.y = e.clientY;
-//   e.stopPropagation();
-//   e.preventDefault();
-// });
-
-// window.addEventListener("touchend", function (e) {
-//   // e.clientX -> mouse position X
-//   mouse.x = e.clientX;
-//   // e.clientY -> mouse position Y
-//   mouse.y = e.clientY;
-//   // mobile fixes
-//   e.stopPropagation();
-//   e.preventDefault();
-// });
-
-// window.addEventListener("click", function (e) {
-//   // e.clientX -> mouse position X
-//   mouse.x = e.clientX;
-//   // e.clientY -> mouse position Y
-//   mouse.y = e.clientY;
-//   // mobile fixes
-//   e.stopPropagation();
-//   e.preventDefault();
-// });
+//! Another note: I have no idea which one of these events fixes the issue: more testing needed
 
 // Implementation for ios Safari
 window.addEventListener("touchstart", function (e) {
@@ -142,7 +114,7 @@ window.addEventListener("mouseover", function (e) {
 });
 
 window.addEventListener("onclick", function (e) {
-  // Does nothing
+  // Does nothing; ensures the touch events above will occur on Safari
 });
 
 //* --------------------------------- RESIZING WINDOW ---------------------------------
